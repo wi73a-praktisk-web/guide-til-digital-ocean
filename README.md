@@ -1,3 +1,7 @@
+## Små tricks
+* " ls -l " viser hvad der er i mappen du er placeret i
+* " pm2 status " viser hvor mange servere der kører eller om der er fejl osv.
+
 ## Opsætning af Digital Ocean Server
 * www.digitalocean.com
 * opret et droplet
@@ -40,6 +44,17 @@ Konfigurer MySQL
 ```
 sudo /usr/bin/mysql_secure_installation
 ```
+Når du har indtastet koden og trykket enter, vil du blive bedt om at angive din root adgangskode, du trykker bare enter.
+Så bliver du bedt om at indtaste en adgangskode til mysql og det vil vi meget gerne. HUSK der er forskel på root adgangskoden og mysql adgangskoden.
+
+herefter trykker vi følgende
+* y
+* n
+* y
+* y
+Mysql er ny sat op.
+Prøv og stop mysql og start den igen.
+
 
 ## 3. Installer Node.js
 
@@ -97,10 +112,21 @@ Opret nøglesæt
 ```
 ssh-keygen -t rsa
 ```
+Du vil blive spurgt om du ønsker at skrifte navn på filen samt placering.
+I vores tilfælde, trykker vi bare enter 3 gange.
 
 Åbn den offentlige nøgle
 ```
 nano ~/.ssh/id_rsa.pub
+```
+Navnet på filen er "id_rsa.pub".
+Har du valgt give ssh nøglen et andet navn så erstat navnet med det.
+Opdel koden så du kan huske det og kopire ved at bruge musen til at markere det hele, så snart du slipper venstre museknap er det kopiret.
+Tryk ctrl-x og tryk n så er du ude af text editoren.
+
+Skriver du cat i stedet for nano kan man nemmere kopirer ssh koden.
+```
+cat ~/.ssh/id_rsa.pub
 ```
 
 Kopier indholdet af den offentlige nøgle til GitHub -> Settings -> SSH and GPG keys -> New SSH key
@@ -114,10 +140,13 @@ Naviger ind i mappen
 cd ~/www
 
 ## 8. Klon dit repository fra GitHub
-
+```
 git clone git@github.com:brugernavn/repository
+```
+Den vil spørge om du er sikker på om du ønsker at clone dit repository
+Skriv yes for at fortsætte
 
-(og når du har en opdatering, skal du lave et pull)
-
+Når du har en opdatering, skal du lave et pull
+```
 git pull git@github.com:brugernavn/repository
-
+```
