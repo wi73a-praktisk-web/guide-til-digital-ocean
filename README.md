@@ -148,5 +148,17 @@ Skriv yes for at fortsætte
 
 Når du har en opdatering, skal du lave et pull
 ```
-git pull git@github.com:brugernavn/repository
+git pull git@github.com:brugernavn/repository master
 ```
+
+## 9. Start app.js
+For at starte sin app.js skal vi ind i mappen.
+```
+cd ~/www/repository-navn
+```
+
+Vi skal lige sikre os at vores node-modules er installeret
+```
+npm install
+```
+Da vi har vores packages.json finder serveren selv ud af hvilke plugins der skal installeres.
