@@ -1,6 +1,7 @@
 ## Små tricks
 * " ls -l " viser hvad der er i mappen du er placeret i
 * " pm2 status " viser hvor mange servere der kører eller om der er fejl osv.
+* " rm -rf mappenavn " sletter mappe + indhold.
 
 ## Opsætning af Digital Ocean Server
 * www.digitalocean.com
@@ -15,8 +16,7 @@
 ## Login til linux
 * Brugernavnet er altid "root" på denne linux maskine
 * Hvis du markere adgangskoden i mailen så pas på mellemrum
-* For at kopire adgangskoden ind, skal du bare højre klikke
-* Du kan også skrive den manuelt, koden er dog usynlig
+* For at kopire adgangskoden ind, skal du bare højre klikke. Du kan også skrive den manuelt, koden er dog usynlig
 * Skriv samme adgangskode igen og derefter lav en ny adgangskode til root brugeren
 
 ## 1. Installer Nano
@@ -162,3 +162,16 @@ Vi skal lige sikre os at vores node-modules er installeret
 npm install
 ```
 Da vi har vores packages.json finder serveren selv ud af hvilke plugins der skal installeres.
+
+# 10. Upsætning af database
+* Åben MySQL Workbench
+* Tryk på " + " under 'MySQL Connections'
+* Angiv et navn til forbindelsen (valgfrit)
+* Skift 'Connection method' til "Standard TCP/IP over SSH"
+* SSH Hostname: IP-Adresse:Port
+* SSH Username: root
+* SSH Password: "Skriv root password"
+* Tryk på "Store in Vault" så du ikke skal taste dit root password hver gang
+* Lad resten være default.
+
+Herfra er det som at bruge phpmyadmin, ellers brug google...

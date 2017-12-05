@@ -1,0 +1,17 @@
+{
+  "name": "digitalocean-test",
+  "version": "1.0.0",
+  "description": "dette er blot en test til digital ocean så man kan teste om der skabes forbindelse til databasen",
+  "main": "server.js",
+  "dependencies": {
+    "mysql2": "^1.5.1",
+    "restify": "^6.3.4",
+    "restify-cors-middleware": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Christian Hansen",
+  "license": "MIT"
+}

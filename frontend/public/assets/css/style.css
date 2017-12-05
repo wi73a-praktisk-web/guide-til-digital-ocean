@@ -1,0 +1,46 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Vollkorn SC', serif;
+    src: url('https://fonts.googleapis.com/css?family=Vollkorn+SC:400,700');
+}
+
+* {
+    color: #fff;
+}
+
+body {
+  background-color: rgb(35, 40, 46);
+}
+
+#content {
+  height: 250px;
+  width: 320px;
+  margin: 0 auto;
+  border: 2px solid white;
+}
+  
+.bg-faded {
+  background-color: transparent;
+}
+  
+.nav-item {
+  margin: 10px;
+}
+  
+.nav-tabs {
+  margin-bottom: 30px; 
+}
+  
+#maintest {
+  margin: 50px 0;
+}
+  
+.footer {
+  margin: 50px 0;
+}
+  
+@media (max-width: 991px) {
+  .nav-item {
+    margin: 0;
+  }
+}
