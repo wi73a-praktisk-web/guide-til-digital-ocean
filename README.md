@@ -3,6 +3,13 @@
 * " pm2 status " viser hvor mange servere der kører eller om der er fejl osv.
 * " rm -rf mappenavn " sletter mappe + indhold.
 
+```
+Hvis MySQL Workbench giver fejlkode: 1067, er det fordi Current_Timestamp ikke er godkendt.
+
+Erstart 'created' med:
+`created` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+```
+
 ## Opsætning af Digital Ocean Server
 * www.digitalocean.com
 * opret et droplet
