@@ -3,15 +3,11 @@
 * " pm2 status " viser hvor mange servere der kører eller om der er fejl osv.
 * " rm -rf mappenavn " sletter mappe + indhold.
 * brug SHOW DATABASES; for at få vist dine databaser, du skal dog lige logge ind først: mysql -u root -p
-
-```
-Hvis MySQL Workbench giver fejlkode: 1067, er det fordi Current_Timestamp ikke er godkendt.
-
+* Hvis MySQL Workbench giver fejlkode: 1067, er det fordi Current_Timestamp ikke er godkendt.
 Erstart 'created' med:
 ```
-`created` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+`created` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00'
 ```
-
 * For at få mysql servicen til at starte automatisk efter genstart af serveren skal man skrive dette:
 ```
 chkconfig --level 345 mysqld on
@@ -21,7 +17,6 @@ Genstart serveren og skriv:
 chkconfig --list mysqld
 ```
 Tjek at 3. 4 & 5 står til "on".
-
 * For at få pm2 til at starte dine javascript filer skal du gøre følgende:
 Start dine javascript filer med:
 ```
