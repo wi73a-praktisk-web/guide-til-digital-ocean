@@ -8,7 +8,30 @@
 Hvis MySQL Workbench giver fejlkode: 1067, er det fordi Current_Timestamp ikke er godkendt.
 
 Erstart 'created' med:
+```
 `created` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+```
+
+* For at få mysql servicen til at starte automatisk efter genstart af serveren skal man skrive dette:
+```
+chkconfig --level 345 mysqld on
+```
+Genstart serveren og skriv:
+```
+chkconfig --list mysqld
+```
+Tjek at 3. 4 & 5 står til "on".
+
+* For at få pm2 til at starte dine javascript filer skal du gøre følgende:
+Start dine javascript filer med:
+```
+pm2 start javascript.js
+```
+Når de er startet skal du blot skrive:
+```
+pm2 startup
+efterfulgt af
+pm2 save
 ```
 
 ## Opsætning af Digital Ocean Server
