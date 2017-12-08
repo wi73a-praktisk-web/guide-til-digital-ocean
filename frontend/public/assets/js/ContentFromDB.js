@@ -28,7 +28,7 @@ function loadContent() {
 
 // Funktion som henter data til visning i content
 function getContent(type = 0, id = 0) {
-let url = 'http://localhost:1338/content';
+let url = 'http://95.85.54.85:1338/content';
 if (type > 0) url += '/content/' + type;
 if (id > 0) url += "/id/" + id;
 // console.log(url);
