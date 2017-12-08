@@ -208,5 +208,4 @@ Sørg for at være inde i mappen hvor app.js er placeret.
 * Du skulle gerne kunne tilgå databasen nu
 * Højre click i Schemas og opret nyt schema, kald det som der står i sql.js filen
 * Kopier din sql ind i query tabben eller vælg database import under server menu
-
-Herfra er det som at bruge phpmyadmin, ellers brug google...
+* For at eksportere sin database går man under server menuen og vælger Data Export. Tryk på databasen du ønsker at eksportere og vælg de tabeller du ønsker eksporteret, vælg derefter mappe placeringen er tryk Start Export
