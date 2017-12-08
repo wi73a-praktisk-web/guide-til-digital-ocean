@@ -17,7 +17,7 @@ Genstart serveren og skriv:
 chkconfig --list mysqld
 ```
 Tjek at 3. 4 & 5 står til "on".
-* For at få pm2 til at starte dine javascript filer skal du gøre følgende:
+* For at få pm2 til at starte dine javascript filer efter genstart af serveren skal du gøre følgende:
 Start dine javascript filer med:
 ```
 pm2 start javascript.js
@@ -25,7 +25,6 @@ pm2 start javascript.js
 Når de er startet skal du blot skrive:
 ```
 pm2 startup
-efterfulgt af
 pm2 save
 ```
 
@@ -189,7 +188,13 @@ npm install
 ```
 Da vi har vores packages.json finder serveren selv ud af hvilke plugins der skal installeres.
 
-# 10. Upsætning af database
+Derefter starter vi vores app.js ved at skrive:
+```
+pm2 start app.js
+```
+Sørg for at være inde i mappen hvor app.js er placeret.
+
+## 10. Upsætning af database
 * Åben MySQL Workbench
 * Tryk på " + " under 'MySQL Connections'
 * Angiv et navn til forbindelsen (valgfrit)
@@ -198,6 +203,10 @@ Da vi har vores packages.json finder serveren selv ud af hvilke plugins der skal
 * SSH Username: root
 * SSH Password: "Skriv root password"
 * Tryk på "Store in Vault" så du ikke skal taste dit root password hver gang
-* Lad resten være default.
+* Lad resten være default
+* Test forbindelsen
+* Du skulle gerne kunne tilgå databasen nu
+* Højre click i Schemas og opret nyt schema, kald det som der står i sql.js filen
+* Kopier din sql ind i query tabben eller vælg database import under server menu
 
 Herfra er det som at bruge phpmyadmin, ellers brug google...
